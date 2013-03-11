@@ -2,7 +2,15 @@
 <html>
     <head>
         <title><cfoutput><cfif structKeyExists(rc, "pageTitle")>#rc.pageTitle#<cfelse>Simple FW/1 Demo</cfif></cfoutput></title>
+        <link rel="stylesheet" href="stylesheets/bootstrap.min.css" />
     </head>
-	<h1>FW/1 Demo</h1>
-    <body><cfoutput>#body#</cfoutput></body>	
+    <body><div class="container">
+        <h1>FW/1 Demo</h1>
+        <cfoutput>
+        <cfif structKeyExists(rc, "subTitle")>
+            <h2>#rc.subtitle#</h2>
+        </cfif>
+        #body#
+        </cfoutput>
+    </div></body>
 </html>
