@@ -5,7 +5,7 @@ component output="false"
         return entityLoad("Person", {}, "name ASC");
     }
 
-    public void function getNewPerson ()
+    public any function getNewPerson ()
     {
         return entityNew("person");
     }
